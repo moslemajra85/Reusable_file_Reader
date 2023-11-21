@@ -1,6 +1,6 @@
 /**
  * @desc - convert string having the form day/month/year to Date
- * @param {string} - dateString string parameter 
+ * @param {string}  dateString string parameter 
  * @returns {Date}
  */
 export function fromStringToDate(dateString: string): Date {
