@@ -68,8 +68,6 @@ const analyser = new WinsAanalysis('Man United');
 const reporter = new ConsoleReport();
 const summary = new Summary(analyser, reporter)
 summary.buildAndPrintReport(matchReader.data)
- 
  ```
- 
 </details>
 
