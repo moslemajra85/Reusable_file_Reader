@@ -74,3 +74,19 @@ const summary = new Summary(analyser, reporter);
 summary.buildAndPrintReport(matchReader.data);
 ```
 </details>
+<<<<<<< HEAD
+=======
+
+## Todo
+Add a `graphical user interface` and `data visualization`
+
+ download the this repo as zip file or clone it to your local machine:
+
+```js
+ npm install : to install dependencies
+ npm start : to build & run
+ npm run start:build : to build your code
+ npm run start:run: to run your code 
+
+```
+>>>>>>> origin/main
