@@ -1,13 +1,9 @@
 import { DataReader } from './DataReader';
 import { fromStringToDate } from './utils/fromStringToDate';
+import { MatchResult } from './MatchResult';
+import { MatchData } from './MatchData';
 
-export enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D',
-}
 
-type MatchData = [Date, string, string, number, number, MatchResult, string];
 export class MatchReader {
   data: MatchData[] = [];
   constructor(public reader: DataReader) {}
@@ -28,4 +24,5 @@ export class MatchReader {
       row[6],
     ];
   }
+
 }
