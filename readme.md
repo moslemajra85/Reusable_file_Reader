@@ -59,3 +59,18 @@ Then we can move the `reporting phase` or `visualization phase`.
 We will adopt the same `design pattern` while implementing the `analysis` and `reporting` phase.The Summary class is `decoupled` from any `concrete class` that implements some sort of analysis or reporting which will give us the freedom to use different type of analysis and reporting.
 
 ![analyser & reporter](design2.png)
+
+## How Everything Fits Togeter
+<details>
+ <summary>Click to expend</summary>
+
+```js
+const csvReader = new CSVFileReader('src/football.csv');
+const matchReader = new MatchReader(csvReader);
+matchReader.load();
+const analyser = new WinsAanalysis('Man United');
+const reporter = new ConsoleReport();
+const summary = new Summary(analyser, reporter);
+summary.buildAndPrintReport(matchReader.data);
+```
+</details>
