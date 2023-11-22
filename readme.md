@@ -29,7 +29,7 @@ The Design show that the **concrete class** `MatchReader` **delegates** the read
 implementing the logic of reading a file from a data source.
 The Reader object might be an instance of PDFFileReader, CSVFileReader, APIReader wich reads data from a remote server or any other Reader the app might needs in the future thus `MatchReader` does not depends on concrete classes.
 
-## How everything fits together
+## Reader in action
 <details>
 <summary>Click to expend</summary>
 
