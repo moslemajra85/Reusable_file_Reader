@@ -30,3 +30,29 @@ implementing the logic of reading a file from a data source.
 The Reader object might be an instance of PDFFileReader, CSVFileReader, APIReader wich reads data from a remote server or any other Reader the app might needs in the future thus `MatchReader` does not depends on concrete classes.
 
 ## How everything fits together
+<details>
+<summary>Click to expend</summary>
+
+```js
+ const reader = new CSVFILEReader(pathtofile);
+ const matchReader = new MatchReader(reader);
+ matchReader.load()
+
+ // we can access to our data throught:
+const result = matchReader.data()
+
+```
+</details>
+
+## Processing Time ( Analysing Data)
+The phase that comes after loading the data is the `analysing` 
+phase in which we can perform many types of analysis based on
+what kind of information we want to extract from the data.
+Then we can move the `reporting phase` or `visualization phase`.
+
+![data flow](flow.png)
+
+# Designing Analyser and Reporter
+ We will adopt the same `design pattern` while implementing the `analysis` and `reporting` phase.The Summary class is `decoupled` from any `concrete class` that implements some sort of analysis or reporting which will give us the freedom to use different type of analysis and reporting.
+
+![analyser & reporter](design2.png)
